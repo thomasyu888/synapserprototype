@@ -3,7 +3,6 @@
 S3method(print,syn_config)
 export("%as%")
 export(.check_login)
-export(.syn)
 export(dict)
 export(get)
 export(import)
