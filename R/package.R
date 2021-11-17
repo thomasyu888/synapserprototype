@@ -126,7 +126,7 @@ syn_config <- function() {
   if (have_synapseclient) {
 
     # get version
-    version_raw <- syn$`__version__`
+    version_raw <- synapseclient$`__version__`
 
     tfv <- strsplit(version_raw, ".", fixed = TRUE)[[1]]
     version <- package_version(paste(tfv[[1]], tfv[[2]], sep = "."))
