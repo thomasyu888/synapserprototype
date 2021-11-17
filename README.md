@@ -9,14 +9,16 @@ This installation guide mimics that of the [rstudio/tensorflow installation guid
 
 Prior to using the synapseprototype R package you need to install a version of synapseclient on your system. Below we describe how to install synapseclient as well the various options available for customizing your installation.
 
-Note that this article principally covers the use of the R install_synapseclient() function, which provides an easy to use wrapper for the various steps required to install synapseclient.
+Note that this article principally covers the use of the R `install_synapseclient()` function, which provides an easy to use wrapper for the various steps required to install synapseclient.
 
 ### Installation
 First, install the synapseprototype R package from GitHub as follows:
 
+```
 remotes::install_github("https://github.com/thomasyu888/synapserprototype")
+```
 
-Then, use the install_synapseclient() function to install synapseclient. Note that on Windows you need a working installation of Anaconda.
+Then, use the `install_synapseclient()` function to install synapseclient. Note that on Windows you need a working installation of Anaconda.
 
 ```
 library(synapserprototype)
@@ -51,6 +53,6 @@ The "virtualenv" and "conda" methods are available on Linux and OS X and only th
 
 ### Alternate Versions
 
-By default, `install_synaspeclient()` install the latest release version of synapseclient. You can override this behavior by specifying the version parameter. For example:
+By default, `install_synapseclient()` install the latest release version of synapseclient. You can override this behavior by specifying the version parameter. For example:
 
 `install_synapseclient(version = "2.4.0")`
