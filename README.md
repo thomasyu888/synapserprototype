@@ -38,11 +38,13 @@ synapseclient needs to be installed within a Python environment on your system. 
 
 These are the available methods and their behavior:
 
-Method|Description
-auto|	Automatically choose an appropriate default for the current platform.
-virtualenv|	Install into a Python virtual environment at `~/.virtualenvs/r-reticulate`
-conda	|Install into an Anaconda Python environment named `r-reticulate`
-system|	Install into the system Python environment
+| Method|Description|
+| --- | ----------- |
+|auto|	Automatically choose an appropriate default for the current platform.|
+|virtualenv|	Install into a Python virtual environment at `~/.virtualenvs/r-reticulate`|
+|conda	|Install into an Anaconda Python environment named `r-reticulate`|
+|system|	Install into the system Python environment|
+
 The "virtualenv" and "conda" methods are available on Linux and OS X and only the "conda" method is available on Windows.
 
 `install_synapseclient` is a wraper around `reticulate::py_install`. Please refer to 'Installing Python Packages' for more information.
