@@ -33,7 +33,7 @@ You can confirm that the installation succeeded with:
 
 ```
 library(synapserprototype)
-syn$`__version__`
+synapseclient$`__version__`
 ```
 
 This will provide you with a default installation of synapseclient suitable for use with the synapserprototype R package.
@@ -68,5 +68,6 @@ Currently only a very simplified version of get is wrapped.
 
 ```
 library(synapserprototype)
+synapserprototype::syn_login("syn1234")
 entity <- synapserprototype::get("syn1234")
 ```
