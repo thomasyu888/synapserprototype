@@ -1,31 +1,25 @@
 
 #' synapseclient for R
 #'
-#' \href{https://www.tensorflow.org}{TensorFlow} is an open source software library
-#' for numerical computation using data flow graphs. Nodes in the graph
-#' represent mathematical operations, while the graph edges represent the
-#' multidimensional data arrays (tensors) communicated between them. The
-#' flexible architecture allows you to deploy computation to one or more CPUs or
-#' GPUs in a desktop, server, or mobile device with a single API.
+#' \href{https://github.com/Sage-Bionetworks/synapsePythonClientg}{synapseclient}
+#' is an open source software library that interacts with Synapse,
+#' a collaborative, open-source research platform that allows teams to share
+#' data, track analyses, and collaborate.
 #'
-#' The \href{https://www.tensorflow.org/api_docs/python/tf/all_symbols}{TensorFlow
-#' API} is composed of a set of Python modules that enable constructing and
-#' executing TensorFlow graphs. The tensorflow package provides access to the
-#' complete TensorFlow API from within R.
 #'
-#' For additional documentation on the tensorflow package see
-#' \href{https://tensorflow.rstudio.com}{https://tensorflow.rstudio.com}
+#' For additional documentation on the synapseclient package see
+#' \href{https://python-docs.synapse.org/build/html/index.html}{https://python-docs.synapse.org/build/html/index.html}
 #'
 #' @import reticulate
 #'
 #' @docType package
-#' @name tensorflow
+#' @name synapserprototype
 NULL
 
 
 # globals
 .globals <- new.env(parent = emptyenv())
-.globals$tensorboard <- NULL
+# .globals$tensorboard <- NULL
 
 .onLoad <- function(libname, pkgname) {
 
@@ -112,10 +106,10 @@ NULL
 
 
 
-#' TensorFlow configuration information
+#' synapseclient configuration information
 #'
-#' @return List with information on the current configuration of TensorFlow.
-#'   You can determine whether TensorFlow was found using the `available`
+#' @return List with information on the current configuration of synapseclient
+#'   You can determine whether synapseclient was found using the `available`
 #'   member (other members vary depending on whether `available` is `TRUE`
 #'   or `FALSE`)
 #'
@@ -158,7 +152,7 @@ syn_config <- function() {
 }
 
 
-#' @rdname tf_config
+#' @rdname syn_config
 #' @keywords internal
 #' @export
 syn_version <- function() {
@@ -180,7 +174,7 @@ print.syn_config <- function(x, ...) {
   }
 }
 
-# Build error message for TensorFlow configuration errors
+# Build error message for synapseclient configuration errors
 syn_config_error_message <- function() {
   message <- "Valid installation of TensorFlow not found."
   config <- py_config()
