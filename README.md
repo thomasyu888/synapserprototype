@@ -68,6 +68,6 @@ Currently only a very simplified version of get is wrapped.
 
 ```
 library(synapserprototype)
-synapserprototype::syn_login("syn1234")
+synapserprototype::syn_login()
 entity <- synapserprototype::get("syn1234")
 ```
