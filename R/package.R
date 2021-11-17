@@ -88,7 +88,7 @@ NULL
     }
 
   ))
-  syn <<- synapseclient$login()
+  # syn <<- synapseclient$login()
   # provide a common base S3 class for tensors
   # reticulate::register_class_filter(function(classes) {
   #   if (any(c("tensorflow.python.ops.variables.Variable",

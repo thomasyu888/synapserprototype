@@ -10,4 +10,4 @@
 #'
 #' }
 #' @export
-syn <- NULL
+.syn <- NULL
