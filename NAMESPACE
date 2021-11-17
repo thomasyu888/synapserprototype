@@ -3,6 +3,7 @@
 S3method(print,syn_config)
 export("%as%")
 export(dict)
+export(get)
 export(import)
 export(install_synapseclient)
 export(iterate)

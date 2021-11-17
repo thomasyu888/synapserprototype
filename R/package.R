@@ -35,7 +35,7 @@ NULL
   #   Sys.setenv(TF_CPP_MIN_LOG_LEVEL = max(min(cpp_log_opt, 1), 0))
 
   # delay load tensorflow
-  syn <<- import("synapseclient", delay_load = list(
+  synapseclient <<- import("synapseclient", delay_load = list(
 
     priority = 5,
 
@@ -69,8 +69,8 @@ NULL
       #   }
       # ))
 
-      # if we loaded tensorflow then register tf help handler
-      register_syn_help_handler()
+      # if we loaded synapseclient then register tf help handler
+      # register_syn_help_handler()
 
       # workaround to silence crash-causing deprecation warnings
       # tryCatch(syn$python$util$deprecation$silence()$`__enter__`(),
@@ -88,7 +88,7 @@ NULL
     }
 
   ))
-
+  syn <<- synapseclient$login()
   # provide a common base S3 class for tensors
   # reticulate::register_class_filter(function(classes) {
   #   if (any(c("tensorflow.python.ops.variables.Variable",
