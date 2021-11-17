@@ -2,7 +2,7 @@
 #'
 #' @param synid Synapse Id of an entity
 .get <- function(synid) {
-  if (exists("syn")) {
+  if (!is.null(syn)) {
     syn$get(synid)
   }
 }
