@@ -15,7 +15,7 @@ Note that this article principally covers the use of the R `install_synapseclien
 First, install the synapseprototype R package from GitHub as follows:
 
 ```
-remotes::install_github("https://github.com/thomasyu888/synapserprototype")
+remotes::install_github("thomasyu888/synapserprototype")
 ```
 
 Then, use the `install_synapseclient()` function to install synapseclient. Note that on Windows you need a working installation of Anaconda.
