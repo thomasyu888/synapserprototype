@@ -80,15 +80,14 @@ NULL
       # already loaded otherwise register emit hook for reticulate
       emit <- get("packageStartupMessage") # R CMD check
       # emit("Loaded synapseclient version ", syn$version$VERSION)
-    }
-    ,
+    },
 
     on_error = function(e) {
       stop(syn_config_error_message(), call. = FALSE)
     }
 
   ))
-  syn <<- synapseclient$login()
+  #syn <<- synapseclient$login()
   # provide a common base S3 class for tensors
   # reticulate::register_class_filter(function(classes) {
   #   if (any(c("tensorflow.python.ops.variables.Variable",
