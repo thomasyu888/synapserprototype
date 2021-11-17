@@ -23,7 +23,10 @@ Then, use the `install_synapseclient()` function to install synapseclient. Note 
 
 ```
 library(synapserprototype)
-install_synapsecilent()
+# For now install in r-reticulate because still need to figure out
+# how to load the python client from other environments
+install_synapseclient(method="conda", envname="r-reticulate")
+
 ```
 
 You can confirm that the installation succeeded with:
