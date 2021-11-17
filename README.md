@@ -5,6 +5,7 @@ format to leverage reticulate to install the Python [synapseclient](https://gith
 
 
 ## Installation Guide
+
 This installation guide mimics that of the [rstudio/tensorflow installation guide](https://tensorflow.rstudio.com/installation/).
 
 Prior to using the synapseprototype R package you need to install a version of synapseclient on your system. Below we describe how to install synapseclient as well the various options available for customizing your installation.
@@ -56,3 +57,13 @@ The "virtualenv" and "conda" methods are available on Linux and OS X and only th
 By default, `install_synapseclient()` install the latest release version of synapseclient. You can override this behavior by specifying the version parameter. For example:
 
 `install_synapseclient(version = "2.4.0")`
+
+
+## Usage
+
+Currently only a very simplified version of get is wrapped.
+
+```
+library(synapserprototype)
+entity <- synapserprototype::get("syn1234")
+```
